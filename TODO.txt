@@ -1,0 +1,5 @@
+Events
+Message Commands (Get AI Response for a Message Content)
+User Commands (Get User Information of a User)
+Slash Command (Help Command)
+Text Commands (?)
