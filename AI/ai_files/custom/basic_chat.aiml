@@ -1,0 +1,16 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+    <category>
+        <pattern>DISCORD SUPPORT</pattern>
+        <template>
+            There you go! Join this server to get support-> https://discord.gg/ATxd9yuhUq
+        </template>
+    </category>
+</aiml>

@@ -1,10 +1,9 @@
 # local files
-AI/ai_files/*
+AI/ai_files/main
 preds.json
 channels.json
 logs.txt
 *.zip
-*.xml
 *.brn
 
 # Byte-compiled / optimized / DLL files
