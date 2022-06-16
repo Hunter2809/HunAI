@@ -1,9 +1,11 @@
 # local files
-AI/*
+AI/ai_files/*
 preds.json
 channels.json
 logs.txt
 *.zip
+*.xml
+*.brn
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
