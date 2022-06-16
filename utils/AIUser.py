@@ -4,24 +4,35 @@ from typing import Iterator
 
 class AIUser:
     def __init__(
-        me, payload: dict[str, str]
+        me,
+        payload: dict[str, str],
     ) -> None:  # Example: {"_id":493451846543998977,"name":"Hunter","age":"16"}
-        me.id = payload["_id"] # Getting the id variable from above
-        pred_items = list(payload.items()) # Example ((name, Hunter), (age, 16))
+        me.id = payload["_id"]  # Getting the id variable from above
+        pred_items = list(payload.items())  # Example ((name, Hunter), (age, 16))
         me.pred_items = me.cleanup_pred_items(pred_items)
-    
-    def cleanup_pred_items(me, payload: list[tuple[str, str]]) -> Iterator[tuple[str, str]]:
+
+    def cleanup_pred_items(
+        me,
+        payload: list[tuple[str, str]],
+    ) -> Iterator[tuple[str, str]]:
         items = list(payload)
         for index, pred in enumerate(items):
             if pred[0].startswith("_") and pred[0] != "_id":
                 del items[index]
         return iter(items)
 
-    def get_predicate(me, name: str) -> str | None:
+    def get_predicate(
+        me,
+        name: str,
+    ) -> str | None:
         res = filter(lambda tupl: tupl[0] == name, me.pred_items)
         return list(res)[0][1]
 
-    def set_predicate(me, key: str, value: str):
+    def set_predicate(
+        me,
+        key: str,
+        value: str,
+    ):
         for index, pair in enumerate(me.pred_items):
             if pair[0] == key:
                 list(me.pred_items)[index] = (key, value)
